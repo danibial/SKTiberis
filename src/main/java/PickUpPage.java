@@ -19,6 +19,7 @@ public class PickUpPage {
     By orderPhone = By.xpath("//input[@placeholder='Телефон отправителя']");
     By orderComment = By.xpath("//textarea[@placeholder='Поручение']");
     By send = By.xpath("//button[@type='submit']");
+    By confirm = By.xpath("//button[text()='OK']");
 
 
 
@@ -67,6 +68,11 @@ public class PickUpPage {
 
     public PickUpPage sendOrder(){
         driver.findElement(send).click();
+        return this;
+    }
+
+    public PickUpPage confirmClik(){
+        driver.findElement(confirm).click();
         return this;
     }
 }
