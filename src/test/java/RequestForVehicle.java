@@ -16,12 +16,12 @@ public class RequestForVehicle {
     private OrderPage orderPage;
     private PickUpPage pickUpPage;
 
-    String loginNameSk = "sktiberisnew";
-    String passwordSk = "TXji23EzcTfyWuD4MHyn";
-    String loginNameIp = "tiberiszarnew";
-    String passwordIp = "Uw9EcZnhP5XTuWNuJrYm";
-    String loginNameTb = "tiberisnew";
-    String passwordTb = "YdM8rAjvJrVDtQqRPagv";
+    String loginNameSk = "loginNameSk";
+    String passwordSk = "passwordSk";
+    String loginNameIp = "loginNameIp";
+    String passwordIp = "passwordIp";
+    String loginNameTb = "loginNameTb";
+    String passwordTb = "passwordTb";
     String date = "02.06.2023";
     String time1 = "16:15";
     String time2 = "17:50";

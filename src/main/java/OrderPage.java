@@ -1,12 +1,16 @@
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class OrderPage {
     WebDriver driver;
+    WebDriverWait wait;
+    JavascriptExecutor js;
 
     public OrderPage(WebDriver driver) {
         this.driver = driver;
+        this.wait = new WebDriverWait(driver,15);
+        this.js = (JavascriptExecutor) driver;
     }
 
     By orderToPickUp = By.xpath("//a[text()='Заявка на забор']");
@@ -43,7 +47,10 @@ public class OrderPage {
     }
 
     public OrderPage addTimeRange(){
+        WebElement element = driver.findElement(timeRange);
+        js.executeScript("arguments[0].scrollIntoView();", element);
         driver.findElement(timeRange).click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(setTimeRange));
         driver.findElement(setTimeRange).click();
         return this;
     }
@@ -84,7 +91,10 @@ public class OrderPage {
     }
 
     public OrderPage choosePaytype(){
+        WebElement element = driver.findElement(paytype);
+        js.executeScript("arguments[0].scrollIntoView();", element);
         driver.findElement(paytype).click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(paytypeNo));
         driver.findElement(paytypeNo).click();
         return this;
     }
