@@ -16,13 +16,13 @@ public class RequestForVehicle {
     private OrderPage orderPage;
     private PickUpPage pickUpPage;
 
-    String loginNameSk = "loginName";
-    String passwordSk = "password";
-    String loginNameIp = "loginNam";
-    String passwordIp = "password";
-    String loginNameTb = "loginNam";
-    String passwordTb = "password";
-    String date = "31.05.2023";
+    String loginNameSk = "sktiberisnew";
+    String passwordSk = "TXji23EzcTfyWuD4MHyn";
+    String loginNameIp = "tiberiszarnew";
+    String passwordIp = "Uw9EcZnhP5XTuWNuJrYm";
+    String loginNameTb = "tiberisnew";
+    String passwordTb = "YdM8rAjvJrVDtQqRPagv";
+    String date = "02.06.2023";
     String time1 = "16:15";
     String time2 = "17:50";
     String town = "Москва";
@@ -54,6 +54,7 @@ public class RequestForVehicle {
         pickUpPage.addOrderPhone(phone);
         pickUpPage.addOrderComment(comment);
         pickUpPage.sendOrder();
+        pickUpPage.confirmClik();
     }
 
 
@@ -71,6 +72,7 @@ public class RequestForVehicle {
         pickUpPage.addOrderPhone(phone);
         pickUpPage.addOrderComment(comment);
         pickUpPage.sendOrder();
+        pickUpPage.confirmClik();
     }
 
     @Test
@@ -87,11 +89,12 @@ public class RequestForVehicle {
         pickUpPage.addOrderPhone(phone);
         pickUpPage.addOrderComment(comment);
         pickUpPage.sendOrder();
+        pickUpPage.confirmClik();
     }
 
 
     @After
-    public void close(){
+   public void close(){
         driver.quit();
     }
 }

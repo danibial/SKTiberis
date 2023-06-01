@@ -62,6 +62,36 @@ public class OrderPage {
         return this;
     }
 
+    public OrderPage addDeliveryAddress (String address){
+        driver.findElement(deliveryAddress).sendKeys(address);
+        return this;
+    }
 
+    public OrderPage addCompany(String companyName){
+        driver.findElement(company).sendKeys(companyName);
+        return this;
+    }
 
+    public OrderPage addPhone (String number){
+        driver.findElement(phoneNumber).sendKeys(number);
+        return this;
+    }
+
+    public OrderPage addOrderQuantity(String quantity){
+        driver.findElement(orderQuantity).sendKeys(Keys.CONTROL+"a");
+        driver.findElement(orderQuantity).sendKeys(quantity);
+        return this;
+    }
+
+    public OrderPage choosePaytype(){
+        driver.findElement(paytype).click();
+        driver.findElement(paytypeNo).click();
+        return this;
+    }
+
+    public OrderPage sendOrder(){
+        driver.findElement(send).click();
+        driver.findElement(closeButton).click();
+        return this;
+    }
 }
