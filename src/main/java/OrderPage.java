@@ -24,6 +24,7 @@ public class OrderPage {
     By paytype = By.xpath("//select[@id='paytype']");
     By paytypeNo = By.xpath("//select[@id='paytype']/option[@value='NO']");
     By send = By.xpath("//button[@type='submit']");
+    By closeButton = By.xpath("//div[@id='ct_offer_modal']//button[@class='close']");
 
     public PickUpPage clickToPickUp(){
         driver.findElement(orderToPickUp).click();
