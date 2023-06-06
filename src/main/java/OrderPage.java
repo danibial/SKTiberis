@@ -29,6 +29,7 @@ public class OrderPage {
     By paytypeNo = By.xpath("//select[@id='paytype']/option[@value='NO']");
     By send = By.xpath("//button[@type='submit']");
     By closeButton = By.xpath("//div[@id='ct_offer_modal']//button[@class='close']");
+    By confirm = By.xpath("//button[text()='OK']");
 
     public PickUpPage clickToPickUp(){
         driver.findElement(orderToPickUp).click();
@@ -101,7 +102,7 @@ public class OrderPage {
 
     public OrderPage sendOrder(){
         driver.findElement(send).click();
-        driver.findElement(closeButton).click();
+        driver.findElement(confirm).click();
         return this;
     }
 }
